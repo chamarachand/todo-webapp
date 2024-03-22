@@ -1,0 +1,23 @@
+.navContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+.greetUser {
+    color: lightblue;
+    font-weight: 500;
+}
+
+.logoutBtn {
+    background-color: green;
+}

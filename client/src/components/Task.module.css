@@ -1,0 +1,60 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30rem;
+    border: 1.5px solid gray;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 7.5px 0;
+}
+
+.task p {
+    font-weight: 500;
+}
+
+.taskEmoji {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.task.isDone {
+    border: 1.5px solid var(--done-color);
+    color: var(--done-color);
+}
+
+.task.isDone .done-icon {
+    color: var(--done-color);
+}
+
+.taskName {
+    display: inline-block;
+}
+
+.deleteIcon,
+.doneIcon {
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.doneIcon {
+    font-size: 1.9rem;
+    color: #228B22;
+    transition: color 0.2s;
+}
+
+.doneIcon:hover {
+    color: #32CD32
+}
+
+.deleteIcon {
+    font-size: 2rem;
+    color: #DC143C;
+    /*Crimson*/
+    transition: color 0.2s;
+}
+
+.deleteIcon:hover {
+    color: #FF2400;
+    /*Scarlet*/
+}

@@ -1,0 +1,102 @@
+.mainContainer {
+    width: 100%;
+    margin: 2rem auto;
+    /* Edit this later to placed perfectly in the middle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.windowContainer {
+    display: flex;
+    width: 70vw;
+    height: 80vh;
+}
+
+.introContainer {
+    width: 60%;
+    background-color: rgba(64, 64, 64, 0.8);
+    overflow: hidden;
+    border-radius: 20px 0 0 20px;
+}
+
+.introContainer h1 {
+    font-size: 2.5rem;
+    margin: 1.4rem;
+}
+
+.introContainer img {
+    width: 24rem;
+}
+
+.loginContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(50, 50, 50, 0.8);
+    border-radius: 0 20px 20px 0;
+}
+
+.welcomeText {
+    margin-bottom: 1rem;
+}
+
+.welcomeText h2 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.field {
+    /* margin: 0.6rem; */
+    margin: 1.2rem auto;
+    text-align: left;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.field input {
+    width: 14rem;
+    padding: 0.5rem 0.7rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(32, 32, 32);
+}
+
+.error {
+    height: 0.4rem;
+}
+
+.error p {
+    font-size: 0.75rem;
+    color: lightcoral;
+    margin: 0;
+}
+
+.serverError {
+    height: 0.4rem;
+    margin-top: 0.4rem;
+}
+
+.serverError p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: crimson;
+    margin: 0;
+}
+
+.loginBtn {
+    background-color: green;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.signInRequest {
+    font-weight: 500;
+    margin: 1.4rem;
+}
