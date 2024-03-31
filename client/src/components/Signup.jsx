@@ -24,7 +24,7 @@ export const Signup = () => {
       password: data.password,
     };
 
-    await Axios.post("http://localhost:3000/api/users", user)
+    await Axios.post("https://todo-webapp-server.vercel.app/api/users", user)
       .then((res) => {
         // alert("Registered Successfully");
         window.location = "/login";

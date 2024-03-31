@@ -24,7 +24,7 @@ export const Login = () => {
       password: data.password,
     };
 
-    await Axios.post("http://localhost:3000/api/auth", user)
+    await Axios.post("https://todo-webapp-server.vercel.app/api/auth", user)
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         window.location = "/";

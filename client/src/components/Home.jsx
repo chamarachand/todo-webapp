@@ -16,7 +16,7 @@ export const Home = () => {
     isLoading: userIsLoading,
     refetch: refetchUser,
   } = useQuery(["user"], () => {
-    return Axios.get("http://localhost:3000/api/users/me", {
+    return Axios.get("https://todo-webapp-server.vercel.app/api/users/me", {
       headers: {
         "x-auth-token": token,
       },
@@ -31,7 +31,7 @@ export const Home = () => {
     refetch: refetchTasks,
   } = useQuery(["task"], () => {
     // may add try catch
-    return Axios.get("http://localhost:3000/api/tasks/me", {
+    return Axios.get("https://todo-webapp-server.vercel.app/api/tasks/me", {
       headers: {
         "x-auth-token": token,
       },
@@ -48,7 +48,10 @@ export const Home = () => {
         completed: false,
       };
 
-      Axios.post("http://localhost:3000/api/tasks", newTask).then((res) => {
+      Axios.post(
+        "https://todo-webapp-server.vercel.app/api/tasks",
+        newTask
+      ).then((res) => {
         console.log("Task added successfully", res.data);
         refetchTasks();
       });
@@ -58,24 +61,30 @@ export const Home = () => {
   };
 
   const deleteTask = (id) => {
-    Axios.delete(`http://localhost:3000/api/tasks/${id}`).then((res) => {
-      console.log("Delete Successful", res.data);
-      refetchTasks();
-    });
+    Axios.delete(`https://todo-webapp-server.vercel.app/api/tasks/${id}`).then(
+      (res) => {
+        console.log("Delete Successful", res.data);
+        refetchTasks();
+      }
+    );
   };
 
   const deleteAll = () => {
-    Axios.delete("http://localhost:3000/api/tasks").then((res) => {
-      console.log(res.data);
-      refetchTasks();
-    });
+    Axios.delete("https://todo-webapp-server.vercel.app/api/tasks").then(
+      (res) => {
+        console.log(res.data);
+        refetchTasks();
+      }
+    );
   };
 
   const updateTask = (id) => {
-    Axios.patch(`http://localhost:3000/api/tasks/${id}`).then((res) => {
-      console.log("Updated Successfully", res.data);
-      refetchTasks();
-    });
+    Axios.patch(`https://todo-webapp-server.vercel.app/api/tasks/${id}`).then(
+      (res) => {
+        console.log("Updated Successfully", res.data);
+        refetchTasks();
+      }
+    );
   };
 
   if (taskIsLoading) return <p>Loading</p>;
